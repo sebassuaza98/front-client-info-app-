@@ -1,0 +1,54 @@
+<div class="container mt-4" style="max-width: 500px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); border: 1px solid #004d99; padding: 20px;">
+  <h2 class="text-center" style="color: #004d99;">Información de Clientes</h2>
+  <form (ngSubmit)="onSearch()" #clientForm="ngForm">
+    <!-- Mensaje de error -->
+    <div *ngIf="clientNotFound" class="alert alert-danger text-center" style="color: #004d99; background-color: #e9f0f9; border: 1px solid #004d99;">
+      Usuario no encontrado
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="documentType" class="form-label" style="color: #333; font-weight: bold;">Tipo de Documento</label>
+      <select
+        id="documentType"
+        name="documentType"
+        [(ngModel)]="selectedType"
+        (ngModelChange)="onTypeChange()"
+        required
+        class="form-control"
+        style="border: 1px solid #004d99; border-radius: 4px;"
+      >
+        <option value="" disabled>Seleccione un tipo de documento</option>
+        <option *ngFor="let type of documentTypes" [value]="type.value">
+          {{ type.label }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="documentNumber" class="form-label" style="color: #333; font-weight: bold;">Número de Documento</label>
+      <input
+        id="documentNumber"
+        name="documentNumber"
+        [(ngModel)]="documentNumber"
+        required
+        maxlength="11"
+        class="form-control"
+        (input)="onInput($event)"
+        [ngClass]="{'is-invalid': !isNumberValid}"
+        style="border: 1px solid #004d99; border-radius: 4px;"
+      />
+      <div *ngIf="!isNumberValid" class="invalid-feedback" style="font-size: 14px;">
+        El número de documento debe tener entre 8 y 11 dígitos y solo números.
+      </div>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="isButtonDisabled"
+      class="btn btn-primary w-100"
+      style="background-color: #004d99; border-radius: 4px; border: none;"
+    >
+      Buscar
+    </button>
+  </form>
+</div>

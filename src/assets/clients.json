@@ -1,0 +1,51 @@
+[
+    {
+      "documentType": "C",
+      "document": "23445322",
+      "firstName": "Juan",
+      "middleName": "Carlos",
+      "lastName": "Perez",
+      "secondLastName": "Lopez"
+    },
+    {
+      "documentType": "C",
+      "document": "12345678",
+      "firstName": "Ana",
+      "middleName": "Maria",
+      "lastName": "Gonzalez",
+      "secondLastName": "Martinez"
+    },
+    {
+      "documentType": "P",
+      "document": "81234567",
+      "firstName": "Carlos",
+      "middleName": "Eduardo",
+      "lastName": "Fernandez",
+      "secondLastName": "Ramirez"
+    },
+    {
+      "documentType": "C",
+      "document": "87654321",
+      "firstName": "Laura",
+      "middleName": "Elena",
+      "lastName": "Castro",
+      "secondLastName": "Paredes"
+    },
+    {
+      "documentType": "P",
+      "document": "87654321",
+      "firstName": "Pedro",
+      "middleName": "Alejandro",
+      "lastName": "Mendoza",
+      "secondLastName": "Vargas"
+    },
+    {
+      "documentType": "C",
+      "document": "56789012",
+      "firstName": "Sofia",
+      "middleName": "Isabel",
+      "lastName": "Salazar",
+      "secondLastName": "Castaneda"
+    }
+  ]
+  
